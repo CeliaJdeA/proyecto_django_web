@@ -1,3 +1,17 @@
 from django.shortcuts import render
+from .models import Jugadora,InstanciaJugadora
 
-# Create your views here.
+def index(request):
+    """
+       Función vista para la página inicio del sitio.
+       """
+    # Genera contadores de algunos de los objetos principales
+    num_jugadoras=Jugadora.objects.all().count
+    num_instancia=InstanciaJugadora.objects.all().count
+
+    # Renderiza la plantilla HTML index.html con los datos en la variable contexto
+    return render(request,'index.html', context={'num_jugadoras':num_jugadoras,'num_instacia':num_instancia})
+
+def jugadoras(request):
+    jugadora=Jugadora.objects.all()
+    return render (request,'jugadoras.html')
