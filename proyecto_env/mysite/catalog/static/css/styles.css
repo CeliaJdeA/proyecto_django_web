@@ -1,5 +1,12 @@
-.sidebar-nav {
-  margin-top: 20px;
-  padding: 0;
-  list-style: none;
+.menu {
+    list-style-type: none; /* Quitar los puntos negros del menú */
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+.texto_base{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+body {
+    background-image: url('file:///C:/sw/proyecto_django_web/proyecto_env/mysite/catalog/static/Captura.PNG');
 }

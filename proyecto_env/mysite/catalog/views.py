@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Jugadora,InstanciaJugadora
+from django.shortcuts import render, redirect
 
 def index(request):
     """
@@ -13,5 +14,5 @@ def index(request):
     return render(request,'index.html', context={'num_jugadoras':num_jugadoras,'num_instacia':num_instancia})
 
 def jugadoras(request):
-    jugadora=Jugadora.objects.all()
-    return render (request,'jugadoras.html')
+    jugadoras_list=Jugadora.objects.all()
+    return render(request, 'jugadoras.html', {'jugadoras_list': jugadoras_list})

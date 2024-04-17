@@ -1,12 +1,11 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<h1>JUGADORAS</h1>
-
-  <p>Conoce <em>a nuestras jugadoras</em>con todo lo que quieras saber sobre ellas</p>
-
-<h2>Dynamic content</h2>
-
-  <p>The library has the following record counts:</p>
-
+    <h1>Listado de Jugadoras</h1>
+    <ul>
+        {% for jugadora in jugadoras_list %}
+            <li>{{ jugadora.nombre }}  {{ jugadora.apellidos }}</li>
+            <!-- Agrega aquí cualquier otra información de la jugadora que desees mostrar -->
+        {% endfor %}
+    </ul>
 {% endblock %}
