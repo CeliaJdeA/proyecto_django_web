@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Jugadora</title>
+</head>
+<body>
+    <h1>Detalles de Jugadora</h1>
+    <p>Nombre: {{ jugadora.nombre }}</p>
+    <p>Apellidos: {{ jugadora.apellidos }}</p>
+    <p>Dorsal: {{ jugadora.dorsal }}</p>
+    <p>Posición: {{ jugadora.posicion }}</p>
+    <p>Nacionalidad: {{ jugadora.nacionalidad }}</p>
+    <p>Categoría: {{ jugadora.categoria }}</p>
+    <!-- Puedes mostrar más información de la jugadora según sea necesario -->
+    <a href="{% url 'jugadoras_list' %}">Volver al listado de jugadoras</a>
+</body>
+</html>

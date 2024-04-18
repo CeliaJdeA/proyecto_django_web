@@ -1,11 +1,14 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-    <h1>Listado de Jugadoras</h1>
-    <ul>
+    <h1 class="titulo_jugadoras">Listado de Jugadoras</h1>
+    <ul class="disposicion_nombre_jugadora">
         {% for jugadora in jugadoras_list %}
-            <li>{{ jugadora.nombre }}  {{ jugadora.apellidos }}</li>
-            <!-- Agrega aquí cualquier otra información de la jugadora que desees mostrar -->
+            <li>
+                <a href="{% url 'detalle_jugadora' jugadora.pk %}">
+                    {{ jugadora.nombre }} {{ jugadora.apellidos }}
+                </a>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}

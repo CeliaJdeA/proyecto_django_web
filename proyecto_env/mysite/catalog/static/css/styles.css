@@ -1,12 +1,63 @@
+
+/* Estilos para el menú */
 .menu {
-    list-style-type: none; /* Quitar los puntos negros del menú */
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+  list-style-type: none; /* Elimina los estilos de la lista */
+  padding: 0;
+  text-align: center; /* Centra los elementos del menú */
+  font-weight: bold;
 }
+
+.menu li {
+  display: inline; /* Muestra los elementos del menú en línea */
+}
+
+.menu li a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000; /* Color del texto del enlace */
+}
+
+.menu li a:hover {
+  background-color: linen; /* Color de fondo al pasar el mouse sobre el enlace */
+}
+
 .texto_base{
     font-family: Arial, sans-serif;
     margin: 20px;
+    text-align: justify;
+    padding-right: 60px;
+    padding-left: 60px;
+    color: #fff;
+    font-weight: bold;
 }
 body {
-    background-image: url('file:///C:/sw/proyecto_django_web/proyecto_env/mysite/catalog/static/Captura.PNG');
+    background-image: url('https://cdn.pixabay.com/photo/2016/10/04/13/43/blurry-1714335_960_720.jpg');
+    background-size: cover;
+    position: relative;
+
+}
+
+.titulo_1{ /* Título "FSF MOSTOLES */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 50px; /* Espacio superior para mover el título hacia abajo */
+    font-family: "Arial black";
+    color: linen;
+}
+.titulo_2{ /* Subtitulo Inicio*/
+    text-align: justify;
+    font-family: "Arial black";
+    color: floralwhite;
+}
+.titulo_jugadoras{
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 50px; /* Espacio superior para mover el título hacia abajo */
+    font-family: "Arial black";
+    color: linen;
+}
+.disposicion_nombre_jugadora{
+    list-style-type: none; /* Elimina los estilos de la lista */
+    padding: 0;
+    text-align: center; /* Centra los elementos del menú */
+    font-weight: bold;
 }
