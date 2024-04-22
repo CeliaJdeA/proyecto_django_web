@@ -18,5 +18,5 @@ def jugadoras(request):
     return render(request, 'jugadoras.html', {'jugadoras_list': jugadoras_list})
 
 def detalle_jugadora(request, jugadora_id):
-    jugadora = get_object_or_404(Jugadora, pk=jugadora_id)
+    jugadora = Jugadora.objects.get(pk=jugadora_id)
     return render(request, 'detalle_jugadora.html', {'jugadora': jugadora})

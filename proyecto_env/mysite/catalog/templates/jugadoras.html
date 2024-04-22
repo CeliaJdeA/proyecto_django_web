@@ -2,13 +2,19 @@
 
 {% block content %}
     <h1 class="titulo_jugadoras">Listado de Jugadoras</h1>
+
     <ul class="disposicion_nombre_jugadora">
         {% for jugadora in jugadoras_list %}
+         <div class="jugadora-box">
+            <div class="jugadora-image">
+                <img src="/static/media/img_jugadoras/{{jugadora.imagen}}">
+            </div>
             <li>
                 <a href="{% url 'detalle_jugadora' jugadora.pk %}">
                     {{ jugadora.nombre }} {{ jugadora.apellidos }}
                 </a>
             </li>
+         </div>
         {% endfor %}
     </ul>
 {% endblock %}

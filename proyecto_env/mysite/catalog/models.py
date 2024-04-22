@@ -26,6 +26,7 @@ class Jugadora(models.Model):
     posicion = models.ForeignKey(Posicione, on_delete=models.SET_NULL, null=True)
     nacionalidad = models.ForeignKey(Nacionalidade, on_delete=models.SET_NULL, null=True)
     categoria = models.ForeignKey(Categoria, on_delete=models.SET_NULL, null=True)
+    imagen = models.CharField(max_length=200, default="/static/media/img_jugadoras/celia.PNG")
 
     def __str__(self):
         return self.nombre
