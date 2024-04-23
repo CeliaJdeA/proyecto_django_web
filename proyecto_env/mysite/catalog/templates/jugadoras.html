@@ -4,14 +4,21 @@
     {% load static %}
     <style>
     .disposicion_nombre_jugadora {
+            display: flex; /* Usa un diseño flexible */
+            flex-wrap: wrap; /* Permite el ajuste automático en múltiples líneas */
+            align-items: center; /* Centra los elementos horizontalmente */
             list-style-type: none; /* Quita los estilos de viñetas de la lista */
             padding: 0;
             margin: 0 auto; /* Centra la lista horizontalmente */
             max-width: 2000px; /* Ancho máximo de la lista */
             overflow: auto; /* Controla el desbordamiento del contenido */
+            scrollbar-width: thin; /* Ancho delgada de la barra de desplazamiento */
+            scrollbar-color: #888 #fff; /* Color de la barra y del fondo */
         }
 
         .jugadora-box {
+            display: flex; /* Usa un diseño flexible para los elementos de la jugadora */
+            flex-direction: column; /* Apila los elementos verticalmente */
             align-items: center; /* Alinea verticalmente los elementos */
             padding: 10px;
         }
@@ -26,8 +33,9 @@
         }
 
         .jugadora-box a {
-            color: #333; /* Color del texto del enlace */
+            color: #fff; /* Color del texto del enlace */
             text-decoration: none; /* Quita el subrayado del enlace */
+            font-size: 20px; /* Tamaño de fuente del nombre de la jugadora */
         }
 
         .jugadora-box a:hover {
@@ -43,11 +51,9 @@
             <div class="jugadora-image">
                      <img src="/static/media/img_jugadoras/{{ jugadora.imagen }}">
             </div>
-            <li>
                 <a href="{% url 'detalle_jugadora' jugadora.pk %}">
                     {{ jugadora.nombre }} {{ jugadora.apellidos }}
                 </a>
-            </li>
          </div>
         {% endfor %}
     </ul>

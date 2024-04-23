@@ -24,7 +24,7 @@
 
 .texto_base{
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 200px;
     text-align: justify;
     padding-right: 60px;
     padding-left: 60px;
@@ -59,7 +59,7 @@ body {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-
+    text-align: center;
 }
 .disposicion_nombre_jugadora a{
     color: #fff;
