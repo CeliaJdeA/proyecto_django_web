@@ -59,8 +59,10 @@ body {
     display: flex;
     flex-direction: row;
     list-style-type: none;
+
 }
 .disposicion_nombre_jugadora a{
     color: #fff;
     margin-right: 20px;
+
 }

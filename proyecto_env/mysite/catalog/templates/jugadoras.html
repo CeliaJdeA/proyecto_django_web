@@ -1,13 +1,47 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
+    {% load static %}
+    <style>
+    .disposicion_nombre_jugadora {
+            list-style-type: none; /* Quita los estilos de viñetas de la lista */
+            padding: 0;
+            margin: 0 auto; /* Centra la lista horizontalmente */
+            max-width: 2000px; /* Ancho máximo de la lista */
+            overflow: auto; /* Controla el desbordamiento del contenido */
+        }
+
+        .jugadora-box {
+            align-items: center; /* Alinea verticalmente los elementos */
+            padding: 10px;
+        }
+        .jugadora-image {
+            margin-right: 10px; /* Espacio a la derecha de la imagen */
+        }
+
+        .jugadora-image img {
+            max-width: 250px; /* Ancho máximo de la imagen de la jugadora */
+            height: auto; /* Altura automática para mantener la proporción */
+
+        }
+
+        .jugadora-box a {
+            color: #333; /* Color del texto del enlace */
+            text-decoration: none; /* Quita el subrayado del enlace */
+        }
+
+        .jugadora-box a:hover {
+            text-decoration: underline; /* Subrayado al pasar el cursor sobre el enlace */
+        }
+    </style>
+
     <h1 class="titulo_jugadoras">Listado de Jugadoras</h1>
 
     <ul class="disposicion_nombre_jugadora">
         {% for jugadora in jugadoras_list %}
          <div class="jugadora-box">
             <div class="jugadora-image">
-                <img src="/static/media/img_jugadoras/{{jugadora.imagen}}">
+                     <img src="/static/media/img_jugadoras/{{ jugadora.imagen }}">
             </div>
             <li>
                 <a href="{% url 'detalle_jugadora' jugadora.pk %}">
