@@ -1,14 +1,14 @@
-## Descripción
+## Descripción 🏝️
 
 Proyecto Web de un equipo de Fútbol Sala femenino crado con Python a través de Django, usando HTML y CSS.
 
-## Autor
+## Autor 👩🏼
 **Celia Jiménez**
 
 * [LinkedIn] (https://www.linkedin.com/in/celiajimenezdea)
 
 ## Ver ejemplo en vivo
-- [ENLACEGITHUBPAGES] (ENLACEGITHUBPAGES)
+- [ENLACEGITHUBPAGES] {ENLACEGITHUBPAGES}
 
 ## Instalación
 Este proyecto no necesita de instalación.
