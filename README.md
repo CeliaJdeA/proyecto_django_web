@@ -7,6 +7,9 @@ Proyecto Web de un equipo de Fútbol Sala femenino crado con Python a través de
 
 * [LinkedIn] (https://www.linkedin.com/in/celiajimenezdea)
 
+## Ver ejemplo en vivo
+- [https://celiajdea.github.io/proyecto_django_web/] (ENLACEGITHUBPAGES)
+
 ## Instalación
 Este proyecto no necesita de instalación.
 
