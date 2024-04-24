@@ -1,20 +1,42 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles de Jugadora</title>
-</head>
-<body>
-    <h1>Detalles de Jugadora</h1>
+{% extends "base_generic.html" %}
 
-    <p>Nombre: {{ jugadora.nombre }}</p>
-    <p>Apellidos: {{ jugadora.apellidos }}</p>
-    <p>Dorsal: {{ jugadora.dorsal }}</p>
-    <p>Posición: {{ jugadora.posicion }}</p>
-    <p>Nacionalidad: {{ jugadora.nacionalidad }}</p>
-    <p>Categoría: {{ jugadora.categoria }}</p>
-    <!-- Puedes mostrar más información de la jugadora según sea necesario -->
-    <a href="{% url 'jugadoras_list' %}">Volver al listado de jugadoras</a>
-</body>
-</html>
+{% block content %}
+    {% load static %}
+    <style>
+        .text{
+            text-align: center;
+            margin-top: 25px;
+            font-size: 20px;
+        }
+        .titulo{
+            text-align: center;
+            font-family: "Arial black";
+        }
+        .enlace{
+            color: #ffc1ee;
+            font-size: 17px;
+            margin-top: 25px;
+        }
+        .jugadora-image{
+            display: flex; /* Usa un contenedor flex para centrar la imagen */
+            justify-content: center; /* Centra horizontalmente el contenido */
+            align-items: center; /* Centra verticalmente el contenido */
+            height: 70vh; /* Establece la altura del contenedor al 100% del viewport height */
+        }
+    </style>
+
+
+    <h1 class="titulo">{{jugadora.nombre }} {{jugadora.apellidos}}</h1>
+    <div class="jugadora-image">
+        <img src="/static/media/img_jugadoras/{{ jugadora.imagen }}">
+    </div>
+    <div class="text">
+        <p>Dorsal: {{ jugadora.dorsal }}</p>
+        <p>Posición: {{ jugadora.posicion }}</p>
+        <p>Nacionalidad: {{ jugadora.nacionalidad }}</p>
+        <p>Categoría: {{ jugadora.categoria }}</p>
+        <!-- Puedes mostrar más información de la jugadora según sea necesario -->
+        <a class="enlace" href="{% url 'jugadoras_list' %}">Volver al listado de jugadoras</a>
+    </div>
+
+{% endblock %}
